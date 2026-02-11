@@ -1,36 +1,141 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Project Starter – Next.js Landing Page
 
-## Getting Started
+Boilerplate base para desenvolvimento de landing pages utilizando Next.js, TypeScript e TailwindCSS.
 
-First, run the development server:
+---
 
-```bash
+## 🎯 Objetivo
+
+Este projeto foi criado para:
+
+- Desenvolver landing pages com alta performance
+- Garantir SEO otimizado
+- Manter consistência visual
+- Evitar código desorganizado
+- Facilitar implementação via IA
+
+---
+
+## 🧱 Stack
+
+- Next.js (App Router)
+- TypeScript
+- TailwindCSS
+- shadcn/ui (opcional)
+- Lucide Icons
+- clsx
+
+---
+
+## 📁 Estrutura de Pastas
+
+src/
+app/
+layout.tsx
+page.tsx
+globals.css
+
+components/
+ui/ → Componentes base (shadcn)
+layout/ → Header, Footer, Container
+sections/ → Seções da landing (Hero, CTA, FAQ)
+common/ → Componentes reutilizáveis simples
+
+config/
+site.ts → Conteúdo configurável
+
+lib/
+utils.ts
+
+styles/
+tokens.css
+animations.css
+
+
+---
+
+## 🧩 Organização de Seções
+
+Cada bloco da landing deve ser uma seção isolada:
+
+components/sections/
+Hero.tsx
+Features.tsx
+Testimonials.tsx
+CTA.tsx
+FAQ.tsx
+
+
+A `page.tsx` deve apenas compor as seções.
+
+---
+
+## 🎨 Design System
+
+Regras obrigatórias:
+
+- Nunca usar valores hardcoded (ex: mt-[37px])
+- Usar apenas escala do Tailwind
+- Respeitar spacing scale
+- Usar tokens definidos
+- Componentes devem ser reutilizáveis
+
+---
+
+## 📌 Regras Arquiteturais
+
+- ❌ Não adicionar lógica de negócio em sections
+- ❌ Não misturar layout com conteúdo
+- ❌ Não criar estilos fora do Tailwind
+- ✅ Criar componentes pequenos e isolados
+- ✅ Separar conteúdo repetível em `config/site.ts`
+
+---
+
+## 🧠 Convenções
+
+### Naming
+
+- Componentes: PascalCase
+- Seções: NomeDescritivo.tsx
+- Arquivos utilitários: camelCase
+
+---
+
+## 🔎 SEO
+
+Utilizar metadata no layout ou page:
+
+export const metadata = {
+title: "",
+description: "",
+}
+
+---
+
+## ⚙️ Como iniciar
+
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🤖 Diretrizes para IA
 
-## Learn More
+- Sempre reutilizar componentes existentes
+- Nunca criar nova estrutura de layout sem necessidade
+- Respeitar arquitetura definida
+- Evitar repetição de código
+- Seguir tokens e padrões existentes
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📦 Quando usar este boilerplate
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Landing pages
+- Páginas institucionais
+- Páginas de marketing
+- MVPs simples
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
