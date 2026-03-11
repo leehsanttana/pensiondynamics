@@ -1,13 +1,27 @@
+import { Header } from "@/sections/header"
+import { Hero } from "@/sections/hero"
+import { Partners } from "@/sections/partners"
+import { Description } from "@/sections/description"
+import { FeaturesHighlights } from "@/sections/features-highlights"
+import { FeaturesGrid } from "@/sections/features-grid"
+import { ApplicationShowcase } from "@/sections/application-showcase"
+import { Testimonials } from "@/sections/testimonials"
+import { ContactCTA } from "@/sections/contact-cta"
+import { Footer } from "@/sections/footer"
+
 export default function HomePage() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center gap-4 px-4">
-      <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-        Landing Page Boilerplate Project
-      </h1>
-      <p className="max-w-md text-center text-muted-foreground">
-        Estrutura pronta para criar landing pages profissionais com Next.js,
-        TypeScript e TailwindCSS.
-      </p>
-    </div>
-  );
+    <main className="flex min-h-screen flex-col items-center bg-background w-full">
+      <Header />
+      <Hero />
+      <Partners />
+      <Description />
+      <FeaturesHighlights />
+      <FeaturesGrid />
+      <ApplicationShowcase />
+      <Testimonials />
+      <ContactCTA />
+      <Footer />
+    </main>
+  )
 }
